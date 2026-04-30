@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="home">
+    <div class="logo">
+    <p class="img-p-hm">Stepik Course</p>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <p class="p-home">
+            <a href="#" class="a-home active" data-ru="Главная" data-en="Home">Главная</a>
+        </p>
+
+        <p class="p-home">
+            <a href="#course" class="a-home" data-ru="О курсе" data-en="About course">О курсе</a>
+        </p>
+
+        <p class="p-home">
+            <a href="#learn" class="a-home" data-ru="Программа" data-en="Program">Программа</a>
+        </p>
+
+        <p class="p-home">
+            <a href="#tariff" class="a-home" data-ru="Тариф" data-en="Tariff">Тариф</a>
+        </p>
+
+        <p class="p-home">
+            <a href="#about" class="a-home" data-ru="О нас" data-en="About us">О нас</a>
+        </p>
+
+        <p class="p-home">
+            <a href="#feedback" class="a-home" data-ru="Обратная связь" data-en="Feedback">Обратная связь</a>
+        </p>
+
+        <p class="p-home">
+            <a href="#reviews" class="a-home" data-ru="Отзывы" data-en="Reviews">Отзывы</a>
+        </p>
+    </nav>
+
+    <div class="header-actions">
+        <button class="small-btn" id="languageBtn">EN</button>
+        <button class="small-btn" id="themeBtn">🌙</button>
+
+        <button class="bt-home" id="loginBtn" data-ru="Вход" data-en="Login">Вход</button>
+        <button class="bt-home" id="registerBtn" data-ru="Регистрация" data-en="Sign up">Регистрация</button>
+    </div>
+
+    <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<main class="course-wrapper">
+
+    <section class="course" id="course">
+        <div class="course-content">
+            <p class="course-label" data-ru="Онлайн-курс Stepik" data-en="Stepik online course">
+                Онлайн-курс Stepik
+            </p>
+
+            <h1 class="h-crs">
+                Корпоративные информационные системы на платформе 1С:Предприятие
+            </h1>
+
+            <p class="p-crs">
+                В курсе представлены теоретические основы корпоративных информационных систем, международные стандарты управления предприятием, особенности автоматизации финансов на платформе 1С:Предприятие, а также практические ситуационные задачи.
+            </p>
+
+            <div class="course-tags">
+                <div class="course-tag">
+                    <img src="png/lvl.png" alt="" width="15" height="15" loading="lazy" class="img-crs">
+                    <p class="p-img-crs">Начальный уровень</p>
+                </div>
+
+                <div class="course-tag">
+                    <img src="png/certificate.png" alt="" width="15" height="15" loading="lazy" class="img-crs">
+                    <p class="p-img-crs">Сертификат Stepik</p>
+                </div>
+            </div>
+
+            <a href="https://stepik.org/course/199980/promo" target="_blank" rel="noopener noreferrer" class="course-btn" data-ru="Перейти к курсу" data-en="Go to course">
+                Перейти к курсу
+            </a>
+        </div>
+    </section>
+
+    <section class="learn-section" id="learn">
+        <div class="learn-header">
+            <p class="learn-label" data-ru="Программа курса" data-en="Course program">
+                Программа курса
+            </p>
+
+            <h2 class="learn-title" data-ru="Чему вы научитесь" data-en="What you will learn">
+                Чему вы научитесь
+            </h2>
+
+            <p class="learn-subtitle"
+               data-ru="После прохождения курса вы сможете работать с корпоративной информационной системой 1С:Предприятие и выполнять основные операции управления предприятием."
+               data-en="After completing the course, you will be able to work with the 1C:Enterprise corporate information system and perform basic enterprise management operations.">
+                После прохождения курса вы сможете работать с корпоративной информационной системой 1С:Предприятие и выполнять основные операции управления предприятием.
+            </p>
+        </div>
+
+        <div class="learn-content">
+            <div class="learn-card learn-card-big">
+                <ul class="learn-list">
+                    <li data-ru="Добавлять и настраивать информационную базу корпоративной информационной системы"
+                        data-en="Add and configure the information base of a corporate information system">
+                        Добавлять и настраивать информационную базу корпоративной информационной системы
+                    </li>
+
+                    <li data-ru="Выполнять настройку внешнего вида и функций корпоративной информационной системы"
+                        data-en="Configure the appearance and functions of a corporate information system">
+                        Выполнять настройку внешнего вида и функций корпоративной информационной системы
+                    </li>
+
+                    <li data-ru="Осуществлять ввод начальных данных в корпоративную информационную систему 1С:Предприятие"
+                        data-en="Enter initial data into the 1C:Enterprise corporate information system">
+                        Осуществлять ввод начальных данных в корпоративную информационную систему 1С:Предприятие
+                    </li>
+
+                    <li data-ru="Осуществлять кадровый учет"
+                        data-en="Perform personnel accounting">
+                        Осуществлять кадровый учет
+                    </li>
+
+                    <li data-ru="Работать с кассовыми и банковскими документами предприятия"
+                        data-en="Work with cash and bank documents of an enterprise">
+                        Работать с кассовыми и банковскими документами предприятия
+                    </li>
+
+                    <li data-ru="Начислять заработную плату, больничные листы и отпускные"
+                        data-en="Calculate salaries, sick leave payments and vacation pay">
+                        Начислять заработную плату, больничные листы и отпускные
+                    </li>
+
+                    <li data-ru="Вести учет материальных и нематериальных активов предприятия"
+                        data-en="Keep records of tangible and intangible assets of an enterprise">
+                        Вести учет материальных и нематериальных активов предприятия
+                    </li>
+
+                    <li data-ru="Вести учет готовой продукции предприятия на складах"
+                        data-en="Keep records of finished products in warehouses">
+                        Вести учет готовой продукции предприятия на складах
+                    </li>
+
+                    <li data-ru="Управлять предприятием с использованием корпоративной информационной системы 1С:Предприятие"
+                        data-en="Manage an enterprise using the 1C:Enterprise corporate information system">
+                        Управлять предприятием с использованием корпоративной информационной системы 1С:Предприятие
+                    </li>
+                </ul>
+            </div>
+
+            <div class="learn-side">
+                <div class="learn-card small-info-card">
+                    <h3 data-ru="Для кого этот курс" data-en="Who this course is for">
+                        Для кого этот курс
+                    </h3>
+
+                    <p data-ru="Студенты средних профессиональных и высших учебных заведений, а также слушатели, заинтересованные в изучении корпоративных информационных систем на платформе 1С:Предприятие."
+                       data-en="Students of secondary vocational and higher educational institutions, as well as learners interested in studying corporate information systems on the 1C:Enterprise platform.">
+                        Студенты средних профессиональных и высших учебных заведений, а также слушатели, заинтересованные в изучении корпоративных информационных систем на платформе 1С:Предприятие.
+                    </p>
+                </div>
+
+                <div class="learn-card small-info-card">
+                    <h3 data-ru="Начальные требования" data-en="Initial requirements">
+                        Начальные требования
+                    </h3>
+
+                    <p data-ru="Для освоения курса требуется базовый уровень владения ПК."
+                       data-en="Basic computer skills are required to complete the course.">
+                        Для освоения курса требуется базовый уровень владения ПК.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-details">
+            <div class="accordion-item active">
+                <button class="accordion-header" type="button">
+                    <span data-ru="Как проходит обучение" data-en="How the training works">Как проходит обучение</span>
+                    <span class="accordion-arrow">⌄</span>
+                </button>
+
+                <div class="accordion-body">
+                    <p data-ru="Курс содержит материалы в формате текстовых конспектов, видеолекции, практические задания, а также тесты с автоматической проверкой."
+                       data-en="The course includes text notes, video lectures, practical tasks, and tests with automatic checking.">
+                        Курс содержит материалы в формате текстовых конспектов, видеолекции, практические задания, а также тесты с автоматической проверкой.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">
+                    <span data-ru="Программа курса" data-en="Course syllabus">Программа курса</span>
+                    <span class="accordion-arrow">⌄</span>
+                </button>
+
+                <div class="accordion-body">
+                    <ol class="program-list">
+                        <li data-ru="Целостность" data-en="Integrity">Целостность</li>
+                        <li data-ru="Входное тестирование" data-en="Entrance testing">Входное тестирование</li>
+                        <li data-ru="Информационные технологии в бизнесе" data-en="Information technologies in business">Информационные технологии в бизнесе</li>
+                        <li data-ru="Особенности экономического управления" data-en="Features of economic management">Особенности экономического управления</li>
+                        <li data-ru="Понятие, задача и состав корпоративных информационных систем" data-en="Concept, purpose and structure of corporate information systems">Понятие, задача и состав корпоративных информационных систем</li>
+                        <li data-ru="Основные преимущества КИС" data-en="Main advantages of CIS">Основные преимущества КИС</li>
+                        <li data-ru="Классификация КИС" data-en="Classification of CIS">Классификация КИС</li>
+                        <li data-ru="Характеристики КИС" data-en="Characteristics of CIS">Характеристики КИС</li>
+                        <li data-ru="Требования к КИС" data-en="Requirements for CIS">Требования к КИС</li>
+                        <li data-ru="Методология МРП" data-en="MRP methodology">Методология МРП</li>
+                        <li data-ru="Методология MRP II" data-en="MRP II methodology">Методология MRP II</li>
+                        <li data-ru="Методология ERP" data-en="ERP methodology">Методология ERP</li>
+                        <li data-ru="Методология ERP II" data-en="ERP II methodology">Методология ERP II</li>
+                        <li data-ru="Обзор КИС 1С:Предприятие" data-en="Overview of 1C:Enterprise CIS">Обзор КИС 1С:Предприятие</li>
+                        <li data-ru="Скачивание и установка учебной версии 1С" data-en="Downloading and installing the educational version of 1C">Скачивание и установка учебной версии 1С</li>
+                        <li data-ru="Первоначальная настройка информационной базы" data-en="Initial setup of the information base">Первоначальная настройка информационной базы</li>
+                        <li data-ru="Ввод основных сведений об организации" data-en="Entering basic organization information">Ввод основных сведений об организации</li>
+                        <li data-ru="Заполнение справочника «Подразделения»" data-en="Filling in the Departments directory">Заполнение справочника «Подразделения»</li>
+                        <li data-ru="Заполнение справочника «Номенклатурные группы»" data-en="Filling in the Nomenclature groups directory">Заполнение справочника «Номенклатурные группы»</li>
+                        <li data-ru="Заполнение справочника «Типы цен»" data-en="Filling in the Price types directory">Заполнение справочника «Типы цен»</li>
+                        <li data-ru="Заполнение справочника «Склады»" data-en="Filling in the Warehouses directory">Заполнение справочника «Склады»</li>
+                        <li data-ru="Заполнение справочника «Номенклатура»" data-en="Filling in the Nomenclature directory">Заполнение справочника «Номенклатура»</li>
+                        <li data-ru="Заполнение справочника «Контрагенты»" data-en="Filling in the Counterparties directory">Заполнение справочника «Контрагенты»</li>
+                        <li data-ru="Настройка функциональности программы" data-en="Configuring program functionality">Настройка функциональности программы</li>
+                        <li data-ru="Настройка параметров учета" data-en="Configuring accounting parameters">Настройка параметров учета</li>
+                        <li data-ru="Настройка учетной политики организации" data-en="Configuring the accounting policy of an organization">Настройка учетной политики организации</li>
+                        <li data-ru="Учет кадров организации" data-en="Personnel accounting of an organization">Учет кадров организации</li>
+                        <li data-ru="Заполнение справочника «Физические лица»" data-en="Filling in the Individuals directory">Заполнение справочника «Физические лица»</li>
+                        <li data-ru="Заполнение справочника «Должности»" data-en="Filling in the Positions directory">Заполнение справочника «Должности»</li>
+                        <li data-ru="Настройка начисления заработной платы" data-en="Configuring payroll accrual">Настройка начисления заработной платы</li>
+                        <li data-ru="Заполнение справочника «Сотрудники»" data-en="Filling in the Employees directory">Заполнение справочника «Сотрудники»</li>
+                        <li data-ru="Помощник ввода элементов" data-en="Element input assistant">Помощник ввода элементов</li>
+                        <li data-ru="Ввод остатков по счету 01.01" data-en="Entering balances for account 01.01">Ввод остатков по счету 01.01</li>
+                        <li data-ru="Ввод остатков по счету 10.01" data-en="Entering balances for account 10.01">Ввод остатков по счету 10.01</li>
+                        <li data-ru="Ввод остатков по счету 41.01" data-en="Entering balances for account 41.01">Ввод остатков по счету 41.01</li>
+                        <li data-ru="Ввод остатков по счету 51" data-en="Entering balances for account 51">Ввод остатков по счету 51</li>
+                        <li data-ru="Ввод остатков по счету 60.01" data-en="Entering balances for account 60.01">Ввод остатков по счету 60.01</li>
+                        <li data-ru="Ввод остатков по счету 62.01" data-en="Entering balances for account 62.01">Ввод остатков по счету 62.01</li>
+                        <li data-ru="Ввод остатков по счету 84.01" data-en="Entering balances for account 84.01">Ввод остатков по счету 84.01</li>
+                        <li data-ru="Формирование уставного капитала в 1С" data-en="Formation of authorized capital in 1C">Формирование уставного капитала в 1С</li>
+                        <li data-ru="Учет кассовых операций" data-en="Cash transaction accounting">Учет кассовых операций</li>
+                        <li data-ru="Учет банковских операций" data-en="Bank transaction accounting">Учет банковских операций</li>
+                        <li data-ru="Учет расчетов с подотчетными лицами в 1С" data-en="Accounting for settlements with accountable persons in 1C">Учет расчетов с подотчетными лицами в 1С</li>
+                        <li data-ru="Теоретические основы учета начислений в 1С" data-en="Theoretical basics of accrual accounting in 1C">Теоретические основы учета начислений в 1С</li>
+                        <li data-ru="Учет начисления заработной платы" data-en="Payroll accrual accounting">Учет начисления заработной платы</li>
+                        <li data-ru="Учет начисления больничных листов" data-en="Sick leave accrual accounting">Учет начисления больничных листов</li>
+                        <li data-ru="Учет начисления отпускных" data-en="Vacation pay accrual accounting">Учет начисления отпускных</li>
+                        <li data-ru="Появление основных средств" data-en="Receipt of fixed assets">Появление основных средств</li>
+                        <li data-ru="Выбытие основных средств" data-en="Disposal of fixed assets">Выбытие основных средств</li>
+                        <li data-ru="Учет нематериальных активов в 1С" data-en="Accounting for intangible assets in 1C">Учет нематериальных активов в 1С</li>
+                        <li data-ru="Поступление материалов" data-en="Receipt of materials">Поступление материалов</li>
+                        <li data-ru="Выбытие материалов" data-en="Disposal of materials">Выбытие материалов</li>
+                        <li data-ru="Выпуск готовой продукции" data-en="Production of finished goods">Выпуск готовой продукции</li>
+                        <li data-ru="Реализация готовой продукции" data-en="Sale of finished goods">Реализация готовой продукции</li>
+                        <li data-ru="Поступление товаров и их производство" data-en="Receipt of goods and their production">Поступление товаров и их производство</li>
+                        <li data-ru="Оказание услуг" data-en="Provision of services">Оказание услуг</li>
+                        <li data-ru="Закрытие месяца в 1С" data-en="Month closing in 1C">Закрытие месяца в 1С</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header" type="button">
+                    <span data-ru="Итоговая аттестация" data-en="Final assessment">Итоговая аттестация</span>
+                    <span class="accordion-arrow">⌄</span>
+                </button>
+
+                <div class="accordion-body">
+                    <ol class="program-list small-program-list">
+                        <li data-ru="Итоговое задание" data-en="Final task">Итоговое задание</li>
+                        <li data-ru="Итоговое обсуждение ч.1" data-en="Final discussion part 1">Итоговое обсуждение ч.1</li>
+                        <li data-ru="Итоговое обсуждение ч.2" data-en="Final discussion part 2">Итоговое обсуждение ч.2</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tariff-section" id="tariff">
+        <div class="tariff-header">
+            <p class="tariff-label" data-ru="Стоимость доступа" data-en="Access price">
+                Стоимость доступа
+            </p>
+
+            <h2 class="tariff-title" data-ru="Тариф курса" data-en="Course tariff">
+                Тариф курса
+            </h2>
+
+            <p class="tariff-subtitle"
+               data-ru="Оформите доступ к курсу для себя или купите его в подарок."
+               data-en="Get access to the course for yourself or buy it as a gift.">
+                Оформите доступ к курсу для себя или купите его в подарок.
+            </p>
+        </div>
+
+        <div class="tariff-content">
+            <div class="tariff-card">
+                <div class="tariff-card-top">
+                    <p class="tariff-badge" data-ru="Доступ к курсу" data-en="Course access">
+                        Доступ к курсу
+                    </p>
+
+                    <h3 data-ru="Корпоративные информационные системы на платформе 1С:Предприятие"
+                        data-en="Corporate information systems on the 1C:Enterprise platform">
+                        Корпоративные информационные системы на платформе 1С:Предприятие
+                    </h3>
+                </div>
+
+                <div class="tariff-price">
+                    <span>7 000 ₽</span>
+                </div>
+
+                <div class="tariff-installments">
+                    <p>
+                        <span class="installment-icon">●</span>
+                        <strong>1 750 ₽</strong>
+                        <span data-ru="× 4 платежа в Сплит" data-en="× 4 payments with Split">× 4 платежа в Сплит</span>
+                    </p>
+
+                    <p>
+                        <span class="installment-icon dark-installment">●</span>
+                        <strong>1 750 ₽</strong>
+                        <span data-ru="× 4 платежа Долями" data-en="× 4 payments in parts">× 4 платежа Долями</span>
+                    </p>
+                </div>
+
+                <div class="tariff-buttons">
+                    <button class="tariff-buy-btn" id="openPaymentBtn" data-ru="Купить" data-en="Buy">
+                        Купить
+                    </button>
+
+                    <button class="tariff-outline-btn" id="tryFreeBtn" data-ru="Попробовать бесплатно" data-en="Try for free">
+                        Попробовать бесплатно
+                    </button>
+
+                    <button class="tariff-outline-btn" id="wantCourseBtn" data-ru="♡ Хочу пройти" data-en="♡ I want to take it">
+                        ♡ Хочу пройти
+                    </button>
+                </div>
+
+                <div class="tariff-extra">
+                    <h4 data-ru="Учиться можно сразу" data-en="You can start learning right away">
+                        Учиться можно сразу
+                    </h4>
+
+                    <p data-ru="Купить от компании" data-en="Buy from a company">▣ Купить от компании</p>
+                    <p data-ru="Купить в подарок" data-en="Buy as a gift">▣ Купить в подарок</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-header">
+            <p class="about-label" data-ru="О преподавателе" data-en="About the teacher">
+                О преподавателе
+            </p>
+
+            <h2 class="about-title" data-ru="Алан Канатов" data-en="Alan Kanatov">
+                Алан Канатов
+            </h2>
+
+            <p class="about-subtitle"
+               data-ru="Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»"
+               data-en="Teacher of the highest qualification category at the Vladikavkaz branch of the Financial University under the Government of the Russian Federation">
+                Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»
+            </p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-card teacher-card">
+                <div class="teacher-avatar">АК</div>
+
+                <div class="teacher-info">
+                    <h3 data-ru="Преподаватель курса" data-en="Course teacher">
+                        Преподаватель курса
+                    </h3>
+
+                    <p data-ru="Присоединился 6 лет назад" data-en="Joined 6 years ago">
+                        Присоединился 6 лет назад
+                    </p>
+
+                    <p data-ru="Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»"
+                       data-en="Teacher of the highest qualification category at the Vladikavkaz branch of the Financial University under the Government of the Russian Federation">
+                        Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-card certificates-card">
+                <h3 data-ru="Сертификаты" data-en="Certificates">
+                    Сертификаты
+                </h3>
+
+                <div class="certificate-item">
+                    <div class="certificate-badge green-badge">✓</div>
+
+                    <div>
+                        <h4 data-ru="Корпоративные информационные системы на платформе 1С:Предприятие"
+                            data-en="Corporate information systems on the 1C:Enterprise platform">
+                            Корпоративные информационные системы на платформе 1С:Предприятие
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="certificate-item">
+                    <div class="certificate-badge orange-badge">★</div>
+
+                    <div>
+                        <h4 data-ru="Создание курса на Stepik" data-en="Creating a course on Stepik">
+                            Создание курса на Stepik
+                        </h4>
+
+                        <p data-ru="Сертификат с отличием. 100% пройдено"
+                           data-en="Certificate with distinction. 100% completed">
+                            Сертификат с отличием. 100% пройдено
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-section" id="feedback">
+        <div class="feedback-header">
+            <p class="feedback-label" data-ru="Связаться с нами" data-en="Contact us">
+                Связаться с нами
+            </p>
+
+            <h2 class="feedback-title" data-ru="Обратная связь" data-en="Feedback">
+                Обратная связь
+            </h2>
+
+            <p class="feedback-subtitle"
+               data-ru="Вы можете написать нам в мессенджеры или оставить свою почту для связи."
+               data-en="You can message us in messengers or leave your email for contact.">
+                Вы можете написать нам в мессенджеры или оставить свою почту для связи.
+            </p>
+        </div>
+
+        <div class="feedback-content">
+            <div class="feedback-card">
+                <div class="feedback-icon telegram-icon">
+                    <span>✈</span>
+                </div>
+
+                <div class="feedback-info">
+                    <h3 data-ru="Telegram" data-en="Telegram">Telegram</h3>
+                    <a href="tel:+79891305149">+7 989 130-51-49</a>
+                </div>
+            </div>
+
+            <div class="feedback-card">
+                <div class="feedback-icon whatsapp-icon">
+                    <span>☎</span>
+                </div>
+
+                <div class="feedback-info">
+                    <h3 data-ru="WhatsApp" data-en="WhatsApp">WhatsApp</h3>
+                    <a href="tel:+79891305149">+7 989 130-51-49</a>
+                </div>
+            </div>
+
+            <div class="feedback-card feedback-mail-card">
+                <div class="feedback-icon mail-icon">
+                    <img src="png/pochta.png" alt="" width="26" height="26" loading="lazy">
+                </div>
+
+                <div class="feedback-info feedback-mail-info">
+                    <h3 data-ru="Почта" data-en="Email">Почта</h3>
+
+                    <form class="feedback-form">
+                        <input type="email" placeholder="Введите почту" data-ru-placeholder="Введите почту" data-en-placeholder="Enter email">
+                        <button type="submit" data-ru="Отправить" data-en="Send">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-header">
+            <p class="reviews-label" data-ru="Мнение студентов" data-en="Students' opinions">
+                Мнение студентов
+            </p>
+
+            <h2 class="reviews-title" data-ru="Отзывы наших студентов" data-en="Reviews from our students">
+                Отзывы наших студентов
+            </h2>
+
+            <p class="reviews-subtitle"
+               data-ru="Посмотрите, что говорят слушатели о курсе по корпоративным информационным системам."
+               data-en="See what learners say about the course on corporate information systems.">
+                Посмотрите, что говорят слушатели о курсе по корпоративным информационным системам.
+            </p>
+        </div>
+
+        <div class="reviews-slider">
+            <div class="reviews-track">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text" data-ru="Мне очень понравился курс, всё доступно и понятно. Узнала много нового. Советую к прохождению." data-en="I really liked the course, everything is clear and understandable. I learned a lot. I recommend taking it.">
+                        Мне очень понравился курс, всё доступно и понятно. Узнала много нового. Советую к прохождению.
+                    </p>
+                    <h3 data-ru="Анастасия Цораева" data-en="Anastasia Tsoraeva">Анастасия Цораева</h3>
+                    <span data-ru="13 дней назад" data-en="13 days ago">13 дней назад</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text" data-ru="Курс, который помогает разобраться в 1С с нуля." data-en="A course that helps you understand 1C from scratch.">
+                        Курс, который помогает разобраться в 1С с нуля.
+                    </p>
+                    <h3 data-ru="Георгий" data-en="Georgiy">Георгий</h3>
+                    <span data-ru="в прошлом месяце" data-en="last month">в прошлом месяце</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text" data-ru="Интересный курс, предельно понятные объяснения, доступный материал, очень понравилось обучение!" data-en="An interesting course, very clear explanations, accessible material, I really enjoyed the training!">
+                        Интересный курс, предельно понятные объяснения, доступный материал, очень понравилось обучение!
+                    </p>
+                    <h3 data-ru="Мария Тедеева" data-en="Maria Tedeeva">Мария Тедеева</h3>
+                    <span data-ru="6 месяцев назад" data-en="6 months ago">6 месяцев назад</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text" data-ru="Очень хороший курс, все очень интересно и доходчиво объясняется." data-en="A very good course, everything is very interesting and clearly explained.">
+                        Очень хороший курс, все очень интересно и доходчиво объясняется.
+                    </p>
+                    <h3 data-ru="Диана Гергиева" data-en="Diana Gergieva">Диана Гергиева</h3>
+                    <span data-ru="6 месяцев назад" data-en="6 months ago">6 месяцев назад</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text" data-ru="Курс для бухгалтеров, есть видео, тесты. Если внимательно читать теорию, то все получится." data-en="A course for accountants, with videos and tests. If you carefully read the theory, everything will work out.">
+                        Курс для бухгалтеров, есть видео, тесты. Если внимательно читать теорию, то все получится.
+                    </p>
+                    <h3 data-ru="Юлия" data-en="Yulia">Юлия</h3>
+                    <span data-ru="9 месяцев назад" data-en="9 months ago">9 месяцев назад</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column footer-main">
+            <h2 class="footer-logo" data-ru="Stepik Course" data-en="Stepik Course">
+                Stepik Course
+            </h2>
+
+            <p data-ru="Онлайн-курс по корпоративным информационным системам на платформе 1С:Предприятие. Изучайте теорию, выполняйте практические задания и проходите обучение в удобном формате."
+               data-en="An online course on corporate information systems on the 1C:Enterprise platform. Study theory, complete practical tasks, and learn in a convenient format.">
+                Онлайн-курс по корпоративным информационным системам на платформе 1С:Предприятие. Изучайте теорию, выполняйте практические задания и проходите обучение в удобном формате.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3 data-ru="О курсе" data-en="About course">
+                О курсе
+            </h3>
+
+            <a href="#course" data-ru="Описание курса" data-en="Course description">
+                Описание курса
+            </a>
+
+            <a href="#learn" data-ru="Программа" data-en="Program">
+                Программа
+            </a>
+
+            <a href="#tariff" data-ru="Тариф" data-en="Tariff">
+                Тариф
+            </a>
+
+            <a href="#reviews" data-ru="Отзывы" data-en="Reviews">
+                Отзывы
+            </a>
+        </div>
+
+        <div class="footer-column">
+            <h3 data-ru="Контакты" data-en="Contacts">
+                Контакты
+            </h3>
+
+            <div class="footer-socials">
+                <a href="mailto:" aria-label="Email">
+                    ✉
+                </a>
+
+                <a href="https://t.me/+79891305149" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    ✈
+                </a>
+
+                <a href="https://wa.me/79891305149" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    ☎
+                </a>
+            </div>
+
+            <a href="tel:+79891305149" class="footer-phone">
+                +7 989 130-51-49
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p data-ru="© 2025 Stepik Course. Все права защищены."
+           data-en="© 2025 Stepik Course. All rights reserved.">
+            © 2025 Stepik Course. Все права защищены.
+        </p>
+    </div>
+</footer>
+
+<div class="modal" id="loginModal">
+    <div class="modal-window">
+        <button class="close-modal" data-close="loginModal">×</button>
+
+        <h2 data-ru="Вход" data-en="Login">Вход</h2>
+
+        <form class="login-form">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Пароль" data-ru-placeholder="Пароль" data-en-placeholder="Password">
+
+            <button type="submit" class="modal-btn" data-ru="Войти" data-en="Login">
+                Войти
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="modal" id="registerModal">
+    <div class="modal-window">
+        <button class="close-modal" data-close="registerModal">×</button>
+
+        <h2 data-ru="Регистрация" data-en="Sign up">Регистрация</h2>
+
+        <form class="register-form">
+            <input type="text" placeholder="Имя" data-ru-placeholder="Имя" data-en-placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Пароль" data-ru-placeholder="Пароль" data-en-placeholder="Password">
+
+            <button type="submit" class="modal-btn" data-ru="Зарегистрироваться" data-en="Create account">
+                Зарегистрироваться
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="payment-modal" id="paymentModal">
+    <div class="payment-window">
+        <button class="close-payment" id="closePaymentBtn">×</button>
+
+        <h2 data-ru="Оплата доступа к курсу" data-en="Course access payment">
+            Оплата доступа к курсу
+        </h2>
+
+        <p class="payment-course-name" data-ru="Корпоративные информационные системы на платформе 1С:Предприятие"
+           data-en="Corporate information systems on the 1C:Enterprise platform">
+            Корпоративные информационные системы на платформе 1С:Предприятие
+        </p>
+
+        <div class="payment-tabs">
+            <button class="payment-tab active" type="button" data-payment-tab="self" data-ru="Себе" data-en="For myself">Себе</button>
+            <button class="payment-tab" type="button" data-payment-tab="gift" data-ru="В подарок" data-en="As a gift">В подарок</button>
+        </div>
+
+        <div class="payment-panel active" data-payment-panel="self">
+            <div class="payment-row">
+                <span data-ru="Ваш e-mail" data-en="Your e-mail">Ваш e-mail</span>
+                <strong class="user-email-text">Войдите, чтобы увидеть почту</strong>
+            </div>
+        </div>
+
+        <div class="payment-panel" data-payment-panel="gift">
+            <label class="gift-field">
+                <span data-ru="E-mail получателя" data-en="Recipient e-mail">E-mail получателя</span>
+                <input type="email" placeholder="Введите e-mail получателя" data-ru-placeholder="Введите e-mail получателя" data-en-placeholder="Enter recipient e-mail">
+            </label>
+
+            <label class="gift-field">
+                <span data-ru="Поздравление" data-en="Message">Поздравление</span>
+                <textarea placeholder="Добавьте приятных слов к подарку" data-ru-placeholder="Добавьте приятных слов к подарку" data-en-placeholder="Add a nice message to the gift"></textarea>
+            </label>
+        </div>
+
+        <div class="payment-row">
+            <span data-ru="Стоимость" data-en="Price">Стоимость</span>
+            <strong>7 000 ₽</strong>
+        </div>
+
+        <button class="payment-main-btn" type="button" data-ru="Оплатить" data-en="Pay">
+            Оплатить
+        </button>
+
+        <button class="payment-outline-btn" type="button" data-ru="Оплатить в Сплит по 1 750 ₽" data-en="Pay with Split 1 750 ₽">
+            Оплатить в Сплит по 1 750 ₽
+        </button>
+
+        <button class="payment-outline-btn" type="button" data-ru="Оплатить Долями по 1 750 ₽" data-en="Pay in parts 1 750 ₽">
+            Оплатить Долями по 1 750 ₽
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
