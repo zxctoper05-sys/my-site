@@ -17,6 +17,8 @@ const courseText = document.querySelector(".p-crs");
 const courseButton = document.querySelector(".course-btn");
 const courseTags = document.querySelectorAll(".p-img-crs");
 
+const feedbackForm = document.querySelector(".feedback-form");
+
 const paymentModal = document.getElementById("paymentModal");
 const openPaymentBtn = document.getElementById("openPaymentBtn");
 const closePaymentBtn = document.getElementById("closePaymentBtn");
@@ -38,6 +40,8 @@ const translations = {
         courseCertificate: "Сертификат Stepik",
         courseButton: "Перейти к курсу",
         formSend: "Форма отправлена!",
+        feedbackSuccess: "Почта отправлена!",
+        feedbackEmpty: "Введите почту",
         loginSuccess: "Вы вошли в аккаунт!",
         registerSuccess: "Регистрация выполнена!",
         emailEmpty: "Введите почту",
@@ -55,6 +59,8 @@ const translations = {
         courseCertificate: "Stepik certificate",
         courseButton: "Go to course",
         formSend: "Form submitted!",
+        feedbackSuccess: "Email sent!",
+        feedbackEmpty: "Enter email",
         loginSuccess: "You are logged in!",
         registerSuccess: "Registration completed!",
         emailEmpty: "Enter email",
@@ -229,6 +235,21 @@ function updateAccordionsHeight() {
     });
 }
 
+if (feedbackForm) {
+    feedbackForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const input = feedbackForm.querySelector("input");
+
+        if (input && input.value.trim() !== "") {
+            alert(translations[currentLanguage].feedbackSuccess);
+            input.value = "";
+        } else {
+            alert(translations[currentLanguage].feedbackEmpty);
+        }
+    });
+}
+
 function updateUserEmailText() {
     userEmailTexts.forEach(item => {
         item.textContent = currentUserEmail || translations[currentLanguage].paymentEmailEmpty;
@@ -315,7 +336,7 @@ if (wantCourseBtn) {
 }
 
 const animatedSections = document.querySelectorAll(
-    ".course, .learn-section, .tariff-section, .about-section, .reviews-section"
+    ".course, .learn-section, .tariff-section, .about-section, .feedback-section, .reviews-section"
 );
 
 if ("IntersectionObserver" in window) {
