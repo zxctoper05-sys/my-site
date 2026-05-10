@@ -1,460 +1,772 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stepik Course</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stepik Course — 1С:Предприятие</title>
+    <meta
+      name="description"
+      content="Учебный промо-сайт курса по корпоративным информационным системам на платформе 1С:Предприятие."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-<header class="home">
-    <div class="logo">
-        <p class="img-p-hm">Stepik Course</p>
-    </div>
+    <header class="header">
+      <a href="#home" class="logo" aria-label="На главную"
+        ><span>SC</span><b>Stepik Course</b></a
+      >
+      <nav class="nav" id="navMenu" aria-label="Основная навигация">
+        <a href="#home" class="nav-link active">Главная</a>
+        <a href="#program" class="nav-link">Программа</a>
+        <a href="#access" class="nav-link">Доступ</a>
+        <a href="#account" class="nav-link">Кабинет</a>
+        <a href="#feedback" class="nav-link">Вопрос</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="icon-btn"
+          id="themeToggleBtn"
+          type="button"
+          aria-label="Сменить тему"
+        >
+          🌙
+        </button>
+        <button
+          class="icon-btn"
+          id="settingsBtn"
+          type="button"
+          aria-label="Настройки"
+        >
+          ⚙
+        </button>
+        <button
+          class="icon-btn notification-btn"
+          id="notificationBtn"
+          type="button"
+          aria-label="Уведомления"
+        >
+          🔔<span id="notificationCount">0</span>
+        </button>
+        <button class="small-btn" id="loginBtn" type="button">Вход</button>
+        <button class="primary-small" id="registerBtn" type="button">
+          Регистрация
+        </button>
+        <button class="profile-chip hidden" id="profileChip" type="button">
+          <span id="chipAvatar">ГС</span><b id="chipName">Гость</b>
+        </button>
+        <button
+          class="burger"
+          id="burgerBtn"
+          type="button"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-    <nav class="nav-menu" id="navMenu">
-        <p class="p-home"><a href="#course" class="a-home active" data-ru="Главная" data-en="Home">Главная</a></p>
-        <p class="p-home"><a href="#course" class="a-home" data-ru="О курсе" data-en="About course">О курсе</a></p>
-        <p class="p-home"><a href="#learn" class="a-home" data-ru="Программа" data-en="Program">Программа</a></p>
-        <p class="p-home"><a href="#tariff" class="a-home" data-ru="Тариф" data-en="Tariff">Тариф</a></p>
-        <p class="p-home"><a href="#about" class="a-home" data-ru="О нас" data-en="About us">О нас</a></p>
-        <p class="p-home"><a href="#reviews" class="a-home" data-ru="Отзывы" data-en="Reviews">Отзывы</a></p>
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Онлайн-курс на Stepik</p>
+          <h1>
+            Корпоративные информационные системы на платформе 1С:Предприятие
+          </h1>
+          <p class="lead">
+            Спокойный и понятный сайт курса: программа, доступ, личный кабинет,
+            демо-оплата, сертификат, отзывы и формы обратной связи работают
+            прямо в браузере.
+          </p>
+          <div class="hero-actions-main">
+            <a class="btn primary" href="#access">Оформить доступ</a>
+            <a class="btn ghost" href="#program">Посмотреть программу</a>
+          </div>
+          <div class="stats">
+            <div><b>45+</b><span>тем</span></div>
+            <div><b>1С</b><span>практика</span></div>
+            <div><b>Stepik</b><span>сертификат</span></div>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="card-top"><span></span><span></span><span></span></div>
+          <div class="course-badge">1C</div>
+          <h2>Практический курс для уверенного старта</h2>
+          <p>
+            Материалы, задания, тесты и базовая логика платформы обучения — всё
+            оформлено в виде полноценного учебного сайта.
+          </p>
+          <div class="status-line">
+            <span>Готовность интерфейса</span><b>100%</b>
+          </div>
+          <div class="meter"><i></i></div>
+        </aside>
+      </section>
+
+      <section class="section feature-grid" id="benefits">
+        <article class="card">
+          <span class="feature-icon">📘</span>
+          <h3>Понятная программа</h3>
+          <p>
+            Темы разбиты по модулям, есть поиск, фильтры и счётчик найденных
+            материалов.
+          </p>
+        </article>
+        <article class="card">
+          <span class="feature-icon">💳</span>
+          <h3>Демо-доступ</h3>
+          <p>
+            Покупка, подарок и пробный доступ работают как учебная модель без
+            списания средств.
+          </p>
+        </article>
+        <article class="card">
+          <span class="feature-icon">👤</span>
+          <h3>Личный кабинет</h3>
+          <p>
+            Профиль, история входов, уведомления, обращения, операции и
+            сертификат сохраняются.
+          </p>
+        </article>
+        <article class="card">
+          <span class="feature-icon">📱</span>
+          <h3>Адаптив</h3>
+          <p>
+            Сайт аккуратно работает на 1440px, ноутбуках, планшетах и телефонах
+            с нижним меню.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="program">
+        <div class="section-head program-head">
+          <p class="eyebrow">Программа курса</p>
+          <h2>Темы курса с поиском, фильтрами и закладками</h2>
+          <p>
+            Найдите нужную тему, отфильтруйте материалы по модулю или типу и
+            сохраните важные темы в закладки.
+          </p>
+        </div>
+
+        <div class="program-tools card">
+          <label class="search-field">
+            <span>Поиск по программе</span>
+            <input
+              id="programSearch"
+              type="search"
+              placeholder="Например: зарплата, ERP, склад, касса"
+            />
+          </label>
+          <label>
+            <span>Модуль</span>
+            <select id="moduleFilter">
+              <option value="all">Все модули</option>
+              <option value="intro">Введение</option>
+              <option value="erp">MRP / ERP</option>
+              <option value="oneC">1С</option>
+              <option value="hr">Кадры</option>
+              <option value="salary">Зарплата</option>
+              <option value="materials">Материалы</option>
+              <option value="final">Итог</option>
+            </select>
+          </label>
+          <label>
+            <span>Тип материала</span>
+            <select id="typeFilter">
+              <option value="all">Все типы</option>
+              <option value="theory">Теория</option>
+              <option value="practice">Практика</option>
+              <option value="test">Тест</option>
+              <option value="video">Видео</option>
+              <option value="final">Итоговое</option>
+            </select>
+          </label>
+          <button class="btn ghost" id="clearProgramFilters" type="button">
+            Очистить
+          </button>
+          <p class="result-count" id="programResultCount">Найдено: 0</p>
+        </div>
+
+        <div class="program-list-grid" id="programList"></div>
+      </section>
+
+      <section class="section access-section" id="access">
+        <div class="section-head">
+          <p class="eyebrow">Доступ к курсу</p>
+          <h2>Оплата в стиле сайта, без лишней яркости</h2>
+          <p>
+            Выберите вариант доступа. Это учебная демонстрация: данные
+            сохраняются в браузере, реальные деньги не списываются.
+          </p>
+        </div>
+        <div class="access-grid">
+          <div class="price-card card">
+            <span class="badge">Полный доступ</span>
+            <h3>
+              Корпоративные информационные системы на платформе 1С:Предприятие
+            </h3>
+            <div class="price">7 000 ₽</div>
+            <p>Единый платёж за материалы курса.</p>
+            <div class="payment-choice" id="paymentChoice">
+              <button
+                class="payment-plan active"
+                data-plan="full"
+                type="button"
+              >
+                <b>Полная оплата</b><span>7 000 ₽</span>
+              </button>
+              <button class="payment-plan" data-plan="split" type="button">
+                <b>Сплит</b><span>1 750 ₽ × 4</span>
+              </button>
+              <button class="payment-plan" data-plan="parts" type="button">
+                <b>Долями</b><span>1 750 ₽ × 4</span>
+              </button>
+            </div>
+            <div class="action-row">
+              <button class="btn primary" id="buyBtn" type="button">
+                Купить
+              </button>
+              <button class="btn ghost" id="trialBtn" type="button">
+                Попробовать бесплатно
+              </button>
+              <button class="btn ghost" id="giftBtn" type="button">
+                Подарить
+              </button>
+            </div>
+          </div>
+
+          <div class="card installment-card">
+            <h3>Калькулятор рассрочки</h3>
+            <p>Выберите срок, чтобы увидеть примерный платёж.</p>
+            <label class="sr-only" for="installmentRange">Срок рассрочки</label>
+<input
+  id="installmentRange"
+  type="range"
+  min="2"
+  max="12"
+  value="4"
+  title="Срок рассрочки"
+  aria-label="Срок рассрочки"
+/>
+            <div class="calc-result">
+              <b id="installmentMonths">4 месяца</b
+              ><span id="installmentAmount">1 750 ₽ / мес.</span>
+            </div>
+            <ul class="clean-list">
+              <li>✓ пробный доступ сохраняется в кабинете;</li>
+              <li>✓ полная покупка меняет статус доступа;</li>
+              <li>✓ подарок записывается в историю операций;</li>
+              <li>✓ все действия отображаются в уведомлениях.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="account">
+        <div class="section-head">
+          <p class="eyebrow">Личный кабинет</p>
+          <h2>Профиль, доступ, история, сертификат и обращения</h2>
+          <p>
+            Кабинет работает локально: редактирование профиля, аватар, история
+            входов, уведомления, операции и обращения сохраняются в браузере.
+          </p>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="card profile-card">
+            <div class="profile-preview">
+              <div class="big-avatar" id="accountAvatar">??</div>
+              <div>
+                <h3 id="accountName">Гость</h3>
+                <p id="accountEmail">Войдите в аккаунт</p>
+              </div>
+            </div>
+            <form id="profileForm" class="profile-form">
+              <label
+                ><span>Имя</span
+                ><input
+                  id="profileNameInput"
+                  type="text"
+                  placeholder="Ваше имя"
+              /></label>
+              <label
+                ><span>Email</span
+                ><input
+                  id="profileEmailInput"
+                  type="email"
+                  placeholder="email@example.com"
+              /></label>
+              <label
+                ><span>Цвет аватара</span
+                ><input id="avatarColorInput" type="color" value="#2563eb"
+              /></label>
+              <label
+                ><span>Загрузить аватар</span
+                ><input id="avatarFileInput" type="file" accept="image/*"
+              /></label>
+              <button class="btn primary" type="submit">
+                Сохранить профиль
+              </button>
+            </form>
+          </article>
+
+          <article class="card status-card">
+            <h3>Статус доступа</h3>
+            <div class="access-status" id="accessStatus">Нет доступа</div>
+            <p id="trialDateText">Пробный доступ не активирован</p>
+            <button class="btn ghost" id="continueBtn" type="button">
+              Продолжить с последней темы
+            </button>
+            <div class="certificate-box">
+              <h4>Демо-сертификат</h4>
+              <p>
+                Сертификат можно сформировать после полного доступа или
+                подарочного доступа.
+              </p>
+              <button
+                class="btn primary"
+                id="generateCertificateBtn"
+                type="button"
+              >
+                Сформировать сертификат
+              </button>
+              <button
+                class="btn ghost"
+                id="downloadCertificateBtn"
+                type="button"
+              >
+                Скачать сертификат
+              </button>
+            </div>
+          </article>
+
+          <article class="card list-card">
+            <h3>Последние открытые темы</h3>
+            <div id="recentTopics" class="mini-list empty-list">
+              Пока нет открытых тем
+            </div>
+          </article>
+          <article class="card list-card">
+            <h3>Закладки уроков</h3>
+            <div id="lessonBookmarks" class="mini-list empty-list">
+              Закладок пока нет
+            </div>
+          </article>
+          <article class="card list-card">
+            <h3>История входов</h3>
+            <div id="loginHistory" class="mini-list empty-list">
+              Истории пока нет
+            </div>
+          </article>
+          <article class="card list-card">
+            <h3>История действий</h3>
+            <div id="actionHistory" class="mini-list empty-list">
+              Действий пока нет
+            </div>
+          </article>
+          <article class="card list-card wide">
+            <h3>История операций</h3>
+            <div id="operationHistory" class="operation-table empty-list">
+              Операций пока нет
+            </div>
+          </article>
+          <article class="card list-card wide">
+            <h3>Мои обращения</h3>
+            <div id="savedRequests" class="mini-list empty-list">
+              Обращений пока нет
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section info-grid" id="results">
+        <article class="card">
+          <h3>Что понадобится</h3>
+          <ul class="clean-list">
+            <li>Компьютер или ноутбук</li>
+            <li>Браузер и аккаунт Stepik</li>
+            <li>Учебная версия 1С</li>
+            <li>Базовые навыки работы с ПК</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Результаты после курса</h3>
+          <ul class="clean-list">
+            <li>Понимание КИС, MRP и ERP</li>
+            <li>Настройка базы и справочников</li>
+            <li>Кадровый и зарплатный учёт</li>
+            <li>Работа с кассой, банком и складами</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Для кого курс</h3>
+          <ul class="clean-list">
+            <li>Студенты СПО и вузов</li>
+            <li>Начинающие пользователи 1С</li>
+            <li>Слушатели, изучающие КИС</li>
+            <li>Те, кто хочет структурный старт</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section" id="feedback">
+        <div class="section-head">
+          <p class="eyebrow">Обратная связь</p>
+          <h2>Задать вопрос о курсе</h2>
+          <p>
+            Форма проверяет поля, сохраняет обращение в кабинете и показывает
+            уведомление об отправке.
+          </p>
+        </div>
+        <form class="card feedback-form" id="feedbackForm">
+          <label
+            ><span>Имя</span
+            ><input name="name" type="text" placeholder="Например: Иван"
+          /></label>
+          <label
+            ><span>Email</span
+            ><input name="email" type="email" placeholder="email@example.com"
+          /></label>
+          <label
+            ><span>Тема</span
+            ><select name="topic">
+              <option>Вопрос по обучению</option>
+              <option>Пробный доступ</option>
+              <option>Оплата</option>
+              <option>Сертификат</option>
+            </select></label
+          >
+          <label class="wide-field"
+            ><span>Сообщение</span
+            ><textarea
+              name="message"
+              placeholder="Напишите вопрос минимум из 10 символов"
+            ></textarea>
+          </label>
+          <label class="check-line wide-field"
+            ><input name="agree" type="checkbox" />
+            <span
+              >Я согласен на обработку данных в рамках учебного проекта</span
+            ></label
+          >
+          <button class="btn primary" type="submit">Отправить вопрос</button>
+        </form>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="section-head">
+          <p class="eyebrow">Отзывы</p>
+          <h2>Отзывы студентов с управлением</h2>
+          <p>
+            Можно переключать отзывы, фильтровать по оценке и добавить свой
+            отзыв — он сохранится после перезагрузки.
+          </p>
+        </div>
+        <div class="reviews-shell card">
+          <div class="review-controls">
+            <button
+  class="arrow-btn"
+  id="prevReview"
+  type="button"
+  title="Предыдущий отзыв"
+  aria-label="Предыдущий отзыв"
+>
+  ‹
+           </button>
+            <label class="sr-only" for="reviewFilter">Фильтр отзывов по оценке</label>
+            <select
+  id="reviewFilter"
+  title="Фильтр отзывов по оценке"
+  aria-label="Фильтр отзывов по оценке"
+>
+  <option value="all">Все оценки</option>
+  <option value="5">5 звёзд</option>
+  <option value="4">4 звезды</option>
+</select>
+            <button
+  class="arrow-btn"
+  id="nextReview"
+  type="button"
+  title="Следующий отзыв"
+  aria-label="Следующий отзыв">
+  ›
+</button>
+          </div>
+          <div class="review-view" id="reviewView"></div>
+          <div class="review-dots" id="reviewDots"></div>
+        </div>
+        <form class="card review-form" id="reviewForm">
+  <h3>Добавить отзыв</h3>
+
+  <label class="sr-only" for="reviewName">Ваше имя</label>
+  <input
+    id="reviewName"
+    name="name"
+    type="text"
+    placeholder="Ваше имя"
+    title="Ваше имя"
+    aria-label="Ваше имя"
+  />
+
+  <label class="sr-only" for="reviewRating">Оценка курса</label>
+  <select
+    id="reviewRating"
+    name="rating"
+    title="Оценка курса"
+    aria-label="Оценка курса"
+  >
+    <option value="5">5 звёзд</option>
+    <option value="4">4 звезды</option>
+    <option value="3">3 звезды</option>
+  </select>
+
+  <label class="sr-only" for="reviewText">Текст отзыва</label>
+  <textarea
+    id="reviewText"
+    name="text"
+    placeholder="Ваш отзыв минимум из 12 символов"
+    title="Текст отзыва"
+    aria-label="Текст отзыва"
+  ></textarea>
+
+  <button class="btn primary" type="submit">Опубликовать отзыв</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <h2>Stepik Course</h2>
+        <p>
+          Учебный сайт курса по корпоративным информационным системам на
+          платформе 1С:Предприятие.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Главная</a><a href="#program">Программа</a
+        ><a href="#access">Доступ</a><a href="#account">Кабинет</a>
+      </div>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Мобильная навигация">
+      <a href="#home">⌂<span>Главная</span></a>
+      <a href="#program">☰<span>Программа</span></a>
+      <a href="#access">₽<span>Доступ</span></a>
+      <a href="#account">◉<span>Кабинет</span></a>
     </nav>
 
-    <div class="header-actions">
-        <button class="small-btn" id="languageBtn">EN</button>
-        <button class="small-btn" id="themeBtn">🌙</button>
-        <button class="bt-home" id="loginBtn" data-ru="Вход" data-en="Login">Вход</button>
-        <button class="bt-home" id="registerBtn" data-ru="Регистрация" data-en="Sign up">Регистрация</button>
-    </div>
-
-    <button class="burger" id="burgerBtn" aria-label="Открыть меню">
-        <span></span>
-        <span></span>
-        <span></span>
+    <button class="to-top" id="toTopBtn" type="button" aria-label="Наверх">
+      ↑
     </button>
-</header>
 
-<main class="course-wrapper">
+    <div class="modal" id="loginModal">
+      <div class="modal-window">
+        <button class="close-modal" data-close="loginModal" type="button">
+          ×
+        </button>
+        <h2>Вход</h2>
+        <form id="loginForm">
+  <label class="sr-only" for="loginEmail">Email</label>
+  <input
+    id="loginEmail"
+    name="email"
+    type="email"
+    placeholder="Email"
+    title="Email"
+    aria-label="Email"
+  />
 
-    <section class="course" id="course">
-        <div class="course-content">
-            <p class="course-label" data-ru="Онлайн-курс Stepik" data-en="Stepik online course">Онлайн-курс Stepik</p>
+  <label class="sr-only" for="loginPassword">Пароль</label>
+  <input
+    id="loginPassword"
+    name="password"
+    type="password"
+    placeholder="Пароль"
+    title="Пароль"
+    aria-label="Пароль"
+  />
 
-            <h1 class="h-crs">
-                Корпоративные информационные системы на платформе 1С:Предприятие
-            </h1>
+  <button class="btn primary" type="submit">Войти</button>
+</form>
+      </div>
+    </div>
+    <div class="modal" id="registerModal">
+      <div class="modal-window">
+        <button class="close-modal" data-close="registerModal" type="button">
+          ×
+        </button>
+        <h2>Регистрация</h2>
+        <form id="registerForm">
+  <label class="sr-only" for="registerName">Имя</label>
+  <input
+    id="registerName"
+    name="name"
+    type="text"
+    placeholder="Имя"
+    title="Имя"
+    aria-label="Имя"
+  />
 
-            <p class="p-crs">
-                В курсе представлены теоретические основы корпоративных информационных систем, международные стандарты управления предприятием, особенности автоматизации финансов на платформе 1С:Предприятие, а также практические ситуационные задачи.
-            </p>
+  <label class="sr-only" for="registerEmail">Email</label>
+  <input
+    id="registerEmail"
+    name="email"
+    type="email"
+    placeholder="Email"
+    title="Email"
+    aria-label="Email"
+  />
 
-            <div class="course-tags">
-                <div class="course-tag">
-                    <span class="tag-icon">⚡</span>
-                    <p class="p-img-crs">Начальный уровень</p>
-                </div>
+  <label class="sr-only" for="registerPassword">Пароль</label>
+  <input
+    id="registerPassword"
+    name="password"
+    type="password"
+    placeholder="Пароль"
+    title="Пароль"
+    aria-label="Пароль"
+  />
 
-                <div class="course-tag">
-                    <span class="tag-icon">🏆</span>
-                    <p class="p-img-crs">Сертификат Stepik</p>
-                </div>
-            </div>
-
-            <a href="https://stepik.org/course/199980/promo" target="_blank" rel="noopener noreferrer" class="course-btn" data-ru="Перейти к курсу" data-en="Go to course">
-                Перейти к курсу
-            </a>
-        </div>
-    </section>
-
-    <section class="learn-section" id="learn">
-        <div class="learn-header">
-            <p class="learn-label" data-ru="Программа курса" data-en="Course program">Программа курса</p>
-
-            <h2 class="learn-title" data-ru="Чему вы научитесь" data-en="What you will learn">Чему вы научитесь</h2>
-
-            <p class="learn-subtitle"
-               data-ru="После прохождения курса вы сможете работать с корпоративной информационной системой 1С:Предприятие и выполнять основные операции управления предприятием."
-               data-en="After completing the course, you will be able to work with the 1C:Enterprise corporate information system and perform basic enterprise management operations.">
-                После прохождения курса вы сможете работать с корпоративной информационной системой 1С:Предприятие и выполнять основные операции управления предприятием.
-            </p>
-        </div>
-
-        <div class="learn-content">
-            <div class="learn-card learn-card-big">
-                <ul class="learn-list">
-                    <li data-ru="Добавлять и настраивать информационную базу корпоративной информационной системы" data-en="Add and configure the information base of a corporate information system">Добавлять и настраивать информационную базу корпоративной информационной системы</li>
-                    <li data-ru="Выполнять настройку внешнего вида и функций корпоративной информационной системы" data-en="Configure the appearance and functions of a corporate information system">Выполнять настройку внешнего вида и функций корпоративной информационной системы</li>
-                    <li data-ru="Осуществлять ввод начальных данных в корпоративную информационную систему 1С:Предприятие" data-en="Enter initial data into the 1C:Enterprise corporate information system">Осуществлять ввод начальных данных в корпоративную информационную систему 1С:Предприятие</li>
-                    <li data-ru="Осуществлять кадровый учет" data-en="Perform personnel accounting">Осуществлять кадровый учет</li>
-                    <li data-ru="Работать с кассовыми и банковскими документами предприятия" data-en="Work with cash and bank documents of an enterprise">Работать с кассовыми и банковскими документами предприятия</li>
-                    <li data-ru="Начислять заработную плату, больничные листы и отпускные" data-en="Calculate salaries, sick leave payments and vacation pay">Начислять заработную плату, больничные листы и отпускные</li>
-                    <li data-ru="Вести учет материальных и нематериальных активов предприятия" data-en="Keep records of tangible and intangible assets of an enterprise">Вести учет материальных и нематериальных активов предприятия</li>
-                    <li data-ru="Вести учет готовой продукции предприятия на складах" data-en="Keep records of finished products in warehouses">Вести учет готовой продукции предприятия на складах</li>
-                    <li data-ru="Управлять предприятием с использованием корпоративной информационной системы 1С:Предприятие" data-en="Manage an enterprise using the 1C:Enterprise corporate information system">Управлять предприятием с использованием корпоративной информационной системы 1С:Предприятие</li>
-                </ul>
-            </div>
-
-            <div class="learn-side">
-                <div class="learn-card small-info-card">
-                    <h3 data-ru="Для кого этот курс" data-en="Who this course is for">Для кого этот курс</h3>
-                    <p data-ru="Студенты средних профессиональных и высших учебных заведений, а также слушатели, заинтересованные в изучении корпоративных информационных систем на платформе 1С:Предприятие."
-                       data-en="Students of secondary vocational and higher educational institutions, as well as learners interested in studying corporate information systems on the 1C:Enterprise platform.">
-                        Студенты средних профессиональных и высших учебных заведений, а также слушатели, заинтересованные в изучении корпоративных информационных систем на платформе 1С:Предприятие.
-                    </p>
-                </div>
-
-                <div class="learn-card small-info-card">
-                    <h3 data-ru="Начальные требования" data-en="Initial requirements">Начальные требования</h3>
-                    <p data-ru="Для освоения курса требуется базовый уровень владения ПК." data-en="Basic computer skills are required to complete the course.">
-                        Для освоения курса требуется базовый уровень владения ПК.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="course-details">
-            <div class="accordion-item active">
-                <button class="accordion-header" type="button">
-                    <span data-ru="Как проходит обучение" data-en="How the training works">Как проходит обучение</span>
-                    <span class="accordion-arrow">⌄</span>
-                </button>
-
-                <div class="accordion-body">
-                    <p data-ru="Курс содержит материалы в формате текстовых конспектов, видеолекции, практические задания, а также тесты с автоматической проверкой."
-                       data-en="The course includes text notes, video lectures, practical tasks, and tests with automatic checking.">
-                        Курс содержит материалы в формате текстовых конспектов, видеолекции, практические задания, а также тесты с автоматической проверкой.
-                    </p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header" type="button">
-                    <span data-ru="Программа курса" data-en="Course syllabus">Программа курса</span>
-                    <span class="accordion-arrow">⌄</span>
-                </button>
-
-                <div class="accordion-body">
-                    <ol class="program-list">
-                        <li>Целостность</li>
-                        <li>Входное тестирование</li>
-                        <li>Информационные технологии в бизнесе</li>
-                        <li>Особенности экономического управления</li>
-                        <li>Понятие, задача и состав корпоративных информационных систем</li>
-                        <li>Основные преимущества КИС</li>
-                        <li>Классификация КИС</li>
-                        <li>Характеристики КИС</li>
-                        <li>Требования к КИС</li>
-                        <li>Методология МРП</li>
-                        <li>Методология MRP II</li>
-                        <li>Методология ERP</li>
-                        <li>Методология ERP II</li>
-                        <li>Обзор КИС 1С:Предприятие</li>
-                        <li>Скачивание и установка учебной версии 1С</li>
-                        <li>Первоначальная настройка информационной базы</li>
-                        <li>Ввод основных сведений об организации</li>
-                        <li>Заполнение справочника «Подразделения»</li>
-                        <li>Заполнение справочника «Номенклатурные группы»</li>
-                        <li>Заполнение справочника «Типы цен»</li>
-                        <li>Заполнение справочника «Склады»</li>
-                        <li>Заполнение справочника «Номенклатура»</li>
-                        <li>Заполнение справочника «Контрагенты»</li>
-                        <li>Настройка функциональности программы</li>
-                        <li>Настройка параметров учета</li>
-                        <li>Настройка учетной политики организации</li>
-                        <li>Учет кадров организации</li>
-                        <li>Заполнение справочника «Физические лица»</li>
-                        <li>Заполнение справочника «Должности»</li>
-                        <li>Настройка начисления заработной платы</li>
-                        <li>Заполнение справочника «Сотрудники»</li>
-                        <li>Помощник ввода элементов</li>
-                        <li>Формирование уставного капитала в 1С</li>
-                        <li>Учет кассовых операций</li>
-                        <li>Учет банковских операций</li>
-                        <li>Учет расчетов с подотчетными лицами в 1С</li>
-                        <li>Теоретические основы учета начислений в 1С</li>
-                        <li>Учет начисления заработной платы</li>
-                        <li>Учет начисления больничных листов</li>
-                        <li>Учет начисления отпускных</li>
-                        <li>Поступление материалов</li>
-                        <li>Выбытие материалов</li>
-                        <li>Выпуск готовой продукции</li>
-                        <li>Реализация готовой продукции</li>
-                        <li>Закрытие месяца в 1С</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header" type="button">
-                    <span data-ru="Итоговая аттестация" data-en="Final assessment">Итоговая аттестация</span>
-                    <span class="accordion-arrow">⌄</span>
-                </button>
-
-                <div class="accordion-body">
-                    <ol class="program-list small-program-list">
-                        <li>Итоговое задание</li>
-                        <li>Итоговое обсуждение ч.1</li>
-                        <li>Итоговое обсуждение ч.2</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="tariff-section" id="tariff">
-        <div class="tariff-header">
-            <p class="tariff-label" data-ru="Стоимость доступа" data-en="Access price">Стоимость доступа</p>
-            <h2 class="tariff-title" data-ru="Тариф курса" data-en="Course tariff">Тариф курса</h2>
-            <p class="tariff-subtitle" data-ru="Оформите доступ к курсу для себя или купите его в подарок." data-en="Get access to the course for yourself or buy it as a gift.">
-                Оформите доступ к курсу для себя или купите его в подарок.
-            </p>
-        </div>
-
-        <div class="tariff-content">
-            <div class="tariff-card">
-                <p class="tariff-badge" data-ru="Доступ к курсу" data-en="Course access">Доступ к курсу</p>
-
-                <h3 data-ru="Корпоративные информационные системы на платформе 1С:Предприятие"
-                    data-en="Corporate information systems on the 1C:Enterprise platform">
-                    Корпоративные информационные системы на платформе 1С:Предприятие
-                </h3>
-
-                <div class="tariff-price">7 000 ₽</div>
-
-                <div class="tariff-installments">
-                    <p><span class="installment-icon"></span><strong>1 750 ₽</strong> × 4 платежа в Сплит</p>
-                    <p><span class="installment-icon dark-installment"></span><strong>1 750 ₽</strong> × 4 платежа Долями</p>
-                </div>
-
-                <div class="tariff-buttons">
-                    <button class="tariff-buy-btn" id="openPaymentBtn" data-ru="Купить" data-en="Buy">Купить</button>
-                    <button class="tariff-outline-btn" id="tryFreeBtn" data-ru="Попробовать бесплатно" data-en="Try for free">Попробовать бесплатно</button>
-                    <button class="tariff-outline-btn" id="wantCourseBtn" data-ru="♡ Хочу пройти" data-en="♡ I want to take it">♡ Хочу пройти</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section" id="about">
-        <div class="about-header">
-            <p class="about-label" data-ru="О преподавателе" data-en="About the teacher">О преподавателе</p>
-            <h2 class="about-title" data-ru="Алан Канатов" data-en="Alan Kanatov">Алан Канатов</h2>
-            <p class="about-subtitle"
-               data-ru="Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»"
-               data-en="Teacher of the highest qualification category at the Vladikavkaz branch of the Financial University under the Government of the Russian Federation">
-                Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»
-            </p>
-        </div>
-
-        <div class="about-content">
-            <div class="about-card teacher-card">
-                <div class="teacher-avatar">АК</div>
-
-                <div class="teacher-info">
-                    <h3 data-ru="Преподаватель курса" data-en="Course teacher">Преподаватель курса</h3>
-                    <p data-ru="Присоединился 6 лет назад" data-en="Joined 6 years ago">Присоединился 6 лет назад</p>
-                    <p data-ru="Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»"
-                       data-en="Teacher of the highest qualification category at the Vladikavkaz branch of the Financial University under the Government of the Russian Federation">
-                        Преподаватель высшей квалификационной категории Владикавказского филиала ФГОБУ ВО «Финансовый университет при Правительстве Российской Федерации»
-                    </p>
-                </div>
-            </div>
-
-            <div class="about-card certificates-card">
-                <h3 data-ru="Сертификаты" data-en="Certificates">Сертификаты</h3>
-
-                <div class="certificate-item">
-                    <div class="certificate-badge green-badge">✓</div>
-                    <div>
-                        <h4 data-ru="Корпоративные информационные системы на платформе 1С:Предприятие"
-                            data-en="Corporate information systems on the 1C:Enterprise platform">
-                            Корпоративные информационные системы на платформе 1С:Предприятие
-                        </h4>
-                    </div>
-                </div>
-
-                <div class="certificate-item">
-                    <div class="certificate-badge orange-badge">★</div>
-                    <div>
-                        <h4 data-ru="Создание курса на Stepik" data-en="Creating a course on Stepik">Создание курса на Stepik</h4>
-                        <p data-ru="Сертификат с отличием. 100% пройдено" data-en="Certificate with distinction. 100% completed">
-                            Сертификат с отличием. 100% пройдено
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="reviews-section" id="reviews">
-        <div class="reviews-header">
-            <p class="reviews-label" data-ru="Мнение студентов" data-en="Students' opinions">Мнение студентов</p>
-            <h2 class="reviews-title" data-ru="Отзывы наших студентов" data-en="Reviews from our students">Отзывы наших студентов</h2>
-            <p class="reviews-subtitle" data-ru="Посмотрите, что говорят слушатели о курсе по корпоративным информационным системам." data-en="See what learners say about the course on corporate information systems.">
-                Посмотрите, что говорят слушатели о курсе по корпоративным информационным системам.
-            </p>
-        </div>
-
-        <div class="reviews-slider">
-            <div class="reviews-track">
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Мне очень понравился курс, всё доступно и понятно. Узнала много нового. Советую к прохождению.</p>
-                    <h3>Анастасия Цораева</h3>
-                    <span>13 дней назад</span>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Курс, который помогает разобраться в 1С с нуля.</p>
-                    <h3>Георгий</h3>
-                    <span>в прошлом месяце</span>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Интересный курс, понятные объяснения, доступный материал, очень понравилось обучение!</p>
-                    <h3>Мария Тедеева</h3>
-                    <span>6 месяцев назад</span>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Очень хороший курс, все очень интересно и доходчиво объясняется.</p>
-                    <h3>Диана Гергиева</h3>
-                    <span>6 месяцев назад</span>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Курс для бухгалтеров, есть видео, тесты. Если внимательно читать теорию, то все получится.</p>
-                    <h3>Юлия</h3>
-                    <span>9 месяцев назад</span>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">👍👍👍</p>
-                    <h3>Сармат</h3>
-                    <span>в прошлом году</span>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">Мне очень понравился курс, всё доступно и понятно. Узнала много нового. Советую к прохождению.</p>
-                    <h3>Анастасия Цораева</h3>
-                    <span>13 дней назад</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-column footer-main">
-            <h2 class="footer-logo">Stepik Course</h2>
-            <p data-ru="Онлайн-курс по корпоративным информационным системам на платформе 1С:Предприятие."
-               data-en="An online course on corporate information systems on the 1C:Enterprise platform.">
-                Онлайн-курс по корпоративным информационным системам на платформе 1С:Предприятие.
-            </p>
-        </div>
-
-        <div class="footer-column">
-            <h3 data-ru="О курсе" data-en="About course">О курсе</h3>
-            <a href="#course" data-ru="Описание курса" data-en="Course description">Описание курса</a>
-            <a href="#learn" data-ru="Программа" data-en="Program">Программа</a>
-            <a href="#tariff" data-ru="Тариф" data-en="Tariff">Тариф</a>
-            <a href="#reviews" data-ru="Отзывы" data-en="Reviews">Отзывы</a>
-        </div>
-
-        <div class="footer-column">
-            <h3 data-ru="Контакты" data-en="Contacts">Контакты</h3>
-            <div class="footer-socials">
-                <a href="mailto:" aria-label="Email">✉</a>
-                <a href="https://t.me/+79891305149" target="_blank" rel="noopener noreferrer" aria-label="Telegram">✈</a>
-                <a href="https://wa.me/79891305149" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">☎</a>
-            </div>
-            <a href="tel:+79891305149" class="footer-phone">+7 989 130-51-49</a>
-        </div>
+  <button class="btn primary" type="submit">
+    Зарегистрироваться
+  </button>
+</form>
+      </div>
     </div>
 
-    <div class="footer-bottom">
-        <p data-ru="© 2025 Stepik Course. Все права защищены." data-en="© 2025 Stepik Course. All rights reserved.">
-            © 2025 Stepik Course. Все права защищены.
+    <div class="modal" id="settingsModal">
+      <div class="modal-window">
+        <button class="close-modal" data-close="settingsModal" type="button">
+          ×
+        </button>
+        <h2>Настройки сайта</h2>
+        <div class="settings-list">
+          <label
+            >Акцентный цвет<input
+              id="settingAccent"
+              type="color"
+              value="#2563eb" /></label
+          ><label class="check-line"
+            ><input id="settingDarkTheme" type="checkbox" /> Ночная тема</label
+          ><label class="check-line"
+            ><input id="settingCompact" type="checkbox" /> Компактный
+            режим</label
+          ><label class="check-line"
+            ><input id="settingLargeText" type="checkbox" /> Увеличенный
+            текст</label
+          ><label class="check-line"
+            ><input id="settingContrast" type="checkbox" /> Больше
+            контраста</label
+          ><label class="check-line"
+            ><input id="settingReducedMotion" type="checkbox" /> Меньше
+            анимаций</label
+          ><button class="btn primary" id="saveSettingsBtn" type="button">
+            Сохранить настройки
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal notification-modal" id="notificationModal">
+      <div class="modal-window">
+        <button
+          class="close-modal"
+          data-close="notificationModal"
+          type="button"
+        >
+          ×
+        </button>
+        <h2>Уведомления</h2>
+        <div id="notificationList" class="mini-list empty-list">
+          Пока нет уведомлений
+        </div>
+        <button class="btn ghost" id="clearNotificationsBtn" type="button">
+          Отметить все как прочитанные
+        </button>
+      </div>
+    </div>
+
+    <div class="modal" id="paymentModal">
+      <div class="modal-window payment-window">
+        <button class="close-modal" data-close="paymentModal" type="button">
+          ×
+        </button>
+        <h2>Оформление доступа</h2>
+        <p class="muted">
+          Учебная демонстрация без реального списания средств.
         </p>
-    </div>
-</footer>
-
-<div class="modal" id="loginModal">
-    <div class="modal-window">
-        <button class="close-modal" data-close="loginModal">×</button>
-        <h2 data-ru="Вход" data-en="Login">Вход</h2>
-
-        <form class="login-form">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Пароль" data-ru-placeholder="Пароль" data-en-placeholder="Password">
-            <button type="submit" class="modal-btn" data-ru="Войти" data-en="Login">Войти</button>
-        </form>
-    </div>
-</div>
-
-<div class="modal" id="registerModal">
-    <div class="modal-window">
-        <button class="close-modal" data-close="registerModal">×</button>
-        <h2 data-ru="Регистрация" data-en="Sign up">Регистрация</h2>
-
-        <form class="register-form">
-            <input type="text" placeholder="Имя" data-ru-placeholder="Имя" data-en-placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Пароль" data-ru-placeholder="Пароль" data-en-placeholder="Password">
-            <button type="submit" class="modal-btn" data-ru="Зарегистрироваться" data-en="Create account">Зарегистрироваться</button>
-        </form>
-    </div>
-</div>
-
-<div class="payment-modal" id="paymentModal">
-    <div class="payment-window">
-        <button class="close-payment" id="closePaymentBtn">×</button>
-
-        <h2 data-ru="Оплата доступа к курсу" data-en="Course access payment">Оплата доступа к курсу</h2>
-
-        <p class="payment-course-name">Корпоративные информационные системы на платформе 1С:Предприятие</p>
-
         <div class="payment-tabs">
-            <button class="payment-tab active" type="button" data-payment-tab="self" data-ru="Себе" data-en="For myself">Себе</button>
-            <button class="payment-tab" type="button" data-payment-tab="gift" data-ru="В подарок" data-en="As a gift">В подарок</button>
+          <button class="payment-tab active" data-mode="self" type="button">
+            Себе</button
+          ><button class="payment-tab" data-mode="gift" type="button">
+            В подарок
+          </button>
         </div>
+        <div class="payment-form">
+          <div class="summary-line">
+            <span>Способ</span><b id="paymentPlanText">Полная оплата</b>
+          </div>
+          <div class="summary-line">
+            <span>Сумма</span><b id="paymentSumText">7 000 ₽</b>
+          </div>
+          <div class="gift-fields hidden" id="giftFields">
+  <label class="sr-only" for="giftName">Имя получателя</label>
+  <input
+    id="giftName"
+    type="text"
+    placeholder="Имя получателя"
+    title="Имя получателя"
+    aria-label="Имя получателя"
+  />
 
-        <div class="payment-panel active" data-payment-panel="self">
-            <div class="payment-row">
-                <span data-ru="Ваш e-mail" data-en="Your e-mail">Ваш e-mail</span>
-                <strong class="user-email-text">Войдите, чтобы увидеть почту</strong>
-            </div>
+  <label class="sr-only" for="giftEmail">Email получателя</label>
+  <input
+    id="giftEmail"
+    type="email"
+    placeholder="Email получателя"
+    title="Email получателя"
+    aria-label="Email получателя"
+  />
+
+  <label class="sr-only" for="giftMessage">Сообщение к подарку</label>
+  <textarea
+    id="giftMessage"
+    placeholder="Сообщение к подарку"
+    title="Сообщение к подарку"
+    aria-label="Сообщение к подарку"
+  ></textarea>
+          </div>
+          <label class="check-line"
+  ><input id="paymentAgree" type="checkbox" /> Я понимаю, что это
+  учебная демо-операция</label>
+            <button class="btn primary" id="confirmPaymentBtn" type="button">
+            Подтвердить оформление
+          </button>
         </div>
-
-        <div class="payment-panel" data-payment-panel="gift">
-            <label class="gift-field">
-                <span data-ru="E-mail получателя" data-en="Recipient e-mail">E-mail получателя</span>
-                <input type="email" placeholder="Введите e-mail получателя" data-ru-placeholder="Введите e-mail получателя" data-en-placeholder="Enter recipient e-mail">
-            </label>
-
-            <label class="gift-field">
-                <span data-ru="Поздравление" data-en="Message">Поздравление</span>
-                <textarea placeholder="Добавьте приятных слов к подарку" data-ru-placeholder="Добавьте приятных слов к подарку" data-en-placeholder="Add a nice message to the gift"></textarea>
-            </label>
-        </div>
-
-        <div class="payment-row">
-            <span data-ru="Стоимость" data-en="Price">Стоимость</span>
-            <strong>7 000 ₽</strong>
-        </div>
-
-        <button class="payment-main-btn" type="button" data-ru="Оплатить" data-en="Pay">Оплатить</button>
-        <button class="payment-outline-btn" type="button" data-ru="Оплатить в Сплит по 1 750 ₽" data-en="Pay with Split 1 750 ₽">Оплатить в Сплит по 1 750 ₽</button>
-        <button class="payment-outline-btn" type="button" data-ru="Оплатить Долями по 1 750 ₽" data-en="Pay in parts 1 750 ₽">Оплатить Долями по 1 750 ₽</button>
+      </div>
     </div>
-</div>
+
+    <div class="modal" id="certificateModal">
+      <div class="modal-window certificate-modal-window">
+        <button class="close-modal" data-close="certificateModal" type="button">
+          ×
+        </button>
+        <div class="certificate" id="certificateCard">
+          <p>Сертификат</p>
+          <h2>Stepik Course</h2>
+          <span>Настоящим подтверждается, что</span>
+          <h3 id="certificateName">Имя пользователя</h3>
+          <span>успешно завершил(а) демонстрационный курс</span
+          ><b
+            >Корпоративные информационные системы на платформе 1С:Предприятие</b
+          ><small id="certificateDate">Дата</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
